@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+			<title>Fibonacci</title>
+		
+		<script>
+			"use strict";
+
+			function Ausgabe(){
+			
+			let Zahl1;
+			let Zahl = document.getElementById("idInput").value;
+			let vOutput = "";
+			let y=0;
+			let x=1;	
+			let count = 1;
+			vOutput = "Jetzt kommt eine Wertetabelle...<br>";		
+			vOutput = vOutput + "<table border=1>";	
+			vOutput = vOutput + "<tr>	<th>Zahl</td>		</tr>" +"<td>"+ "1" +"</td>";
+			
+			while (x <= Zahl) {
+				Zahl1 = y + count;
+				y = count;
+				count = Zahl1;
+			vOutput = vOutput + "<tr> <td>"+Zahl1+"</td>" + "</tr>" ;
+		
+			x++;
+			}
+			
+			document.getElementById("idAusgabe").innerHTML = vOutput;
+			}	
+
+		
+		</script>
+	
+	</head>
+
+	<body>
+		<h1>Fibonacci</h1>
+		Hier Zahl eingeben: <input id="idInput" type="text" value="10"><br><br>
+		<button onclick="Ausgabe();">Berechnen in einer Wertetabelle</button><br><br>
+		<div id="idAusgabe"></div>
+	</body>
+</html>
